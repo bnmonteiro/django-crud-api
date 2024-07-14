@@ -1,0 +1,47 @@
+GET http://localhost:8000/api/pessoas
+
+###
+POST http://localhost:8000/api/pessoas/calculate-peso-ideal
+Content-Type: application/json
+{
+  "altura": 1.75,
+  "sexo": "M"
+}
+
+###
+GET http://localhost:8000/api/pessoas/59
+
+### Search Pessoa by Nome
+GET http://localhost:8000/api/pessoas?nome=11
+Content-Type: application/json
+
+###
+DELETE http://localhost:8000/api/pessoas/11
+
+
+###
+POST http://localhost:8000/api/pessoas
+Content-Type: application/json
+
+{
+  "nome": "Pessoa 01",
+  "data_nasc": "1989-01-26",
+  "cpf": "12345678901",
+  "sexo": "F",
+  "altura": 1.75,
+  "peso": 70.0
+}
+
+###
+PUT http://localhost:8000/api/pessoas/56
+Content-Type: application/json
+
+{
+  "nome": "Pessoa 001",
+  "data_nasc": "1990-01-01",
+  "cpf": "12345678901",
+  "sexo": "F",
+  "altura": 1.75,
+  "peso": 70.0
+}
+
